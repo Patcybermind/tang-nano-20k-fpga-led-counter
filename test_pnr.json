@@ -1,0 +1,3385 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.7-63-g2dc71213)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "01010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "27000000.000000",
+        "cst.filename": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\tangnano20k.cst",
+        "packer.partno": "GW2AR-LV18QN88C8/I7",
+        "packer.chipdb": "GW2A-18C",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:1.1-21.10"
+      },
+      "ports": {
+        "led": {
+          "direction": "output",
+          "bits": [ 9483, 9481, 9479, 9477, 9475, 9473 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 9267 ]
+        }
+      },
+      "cells": {
+        "clockCounter_DFFR_Q_D_ALU_SUM_DUMMY_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y38/ALU1"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU0"
+          },
+          "port_directions": {
+            "I2": "input",
+            "COUT": "output"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "COUT": [ 9507 ]
+          }
+        },
+        "ledCounter_DFFE_Q_D_ALU_SUM_DUMMY_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y42/ALU1"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU0"
+          },
+          "port_directions": {
+            "I2": "input",
+            "COUT": "output"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "COUT": [ 9505 ]
+          }
+        },
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X50Y27/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 9500 ]
+          }
+        },
+        "led_OBUF_O_5_I_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y40/LUT2",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9432 ],
+            "F": [ 9436 ]
+          }
+        },
+        "led_OBUF_O_5": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y50/IOBB",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9483 ],
+            "I": [ 9436 ]
+          }
+        },
+        "led_OBUF_O_4": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y50/IOBA",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9481 ],
+            "I": [ 9467 ]
+          }
+        },
+        "led_OBUF_O_3": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y48/IOBB",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9479 ],
+            "I": [ 9465 ]
+          }
+        },
+        "led_OBUF_O_2": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y48/IOBA",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9477 ],
+            "I": [ 9463 ]
+          }
+        },
+        "led_OBUF_O_1": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y46/IOBB",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9475 ],
+            "I": [ 9471 ]
+          }
+        },
+        "led_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y46/IOBA",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9473 ],
+            "I": [ 9469 ]
+          }
+        },
+        "ledCounter_LUT1_I0_4": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y44/LUT2",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9412 ],
+            "F": [ 9471 ]
+          }
+        },
+        "ledCounter_LUT1_I0_3": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y43/LUT1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9409 ],
+            "F": [ 9469 ]
+          }
+        },
+        "ledCounter_LUT1_I0_2": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y48/LUT0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9428 ],
+            "F": [ 9467 ]
+          }
+        },
+        "ledCounter_LUT1_I0_1": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y43/LUT5",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9423 ],
+            "F": [ 9465 ]
+          }
+        },
+        "ledCounter_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y46/LUT2",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9418 ],
+            "F": [ 9463 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 9501 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 9500 ]
+          }
+        },
+        "ledCounter_DFFE_Q_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y42/ALU0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9408 ],
+            "I3": [ 9500 ],
+            "I1": [ 9409 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9459 ],
+            "CIN": [ 9415 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000010000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/LUT6",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9313 ],
+            "I2": [ 9308 ],
+            "I1": [ 9303 ],
+            "I0": [ 9298 ],
+            "F": [ 9447 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/LUT1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:153.41-153.66|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9293 ],
+            "I2": [ 9284 ],
+            "I1": [ 9403 ],
+            "I0": [ 9397 ],
+            "F": [ 9446 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/LUT0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:152.41-152.66|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 9445 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_S0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/LUT7",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9362 ],
+            "I2": [ 9358 ],
+            "I1": [ 9353 ],
+            "I0": [ 9348 ],
+            "F": [ 9451 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000001000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y37/LUT1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:153.41-153.66|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9337 ],
+            "I2": [ 9331 ],
+            "I1": [ 9325 ],
+            "I0": [ 9319 ],
+            "F": [ 9450 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y37/LUT0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:152.41-152.66|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 9449 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y37/MUX0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9451 ],
+            "O": [ 9441 ],
+            "I1": [ 9450 ],
+            "I0": [ 9449 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/MUX0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 9447 ],
+            "O": [ 9440 ],
+            "I1": [ 9446 ],
+            "I0": [ 9445 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_LUT4_F_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000001000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y39/LUT0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9371 ],
+            "I2": [ 9345 ],
+            "I1": [ 9280 ],
+            "I0": [ 9275 ],
+            "F": [ 9439 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000100000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/LUT7",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9391 ],
+            "I2": [ 9386 ],
+            "I1": [ 9381 ],
+            "I0": [ 9376 ],
+            "F": [ 9438 ]
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/LUT7",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 9441 ],
+            "I2": [ 9440 ],
+            "I1": [ 9439 ],
+            "I0": [ 9438 ],
+            "F": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q_5": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y40/DFF0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9432 ],
+            "D": [ 9436 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_CIN_ALU_COUT": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9433 ],
+            "I3": [ 9500 ],
+            "I1": [ 9432 ],
+            "I0": [ 9500 ],
+            "COUT": [ 9430 ],
+            "CIN": [ 9505 ]
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9427 ],
+            "I3": [ 9500 ],
+            "I1": [ 9428 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9425 ],
+            "CIN": [ 9430 ]
+          }
+        },
+        "ledCounter_DFFE_Q_4": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y41/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9428 ],
+            "D": [ 9427 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q_3_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9422 ],
+            "I3": [ 9500 ],
+            "I1": [ 9423 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9420 ],
+            "CIN": [ 9425 ]
+          }
+        },
+        "ledCounter_DFFE_Q_3": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y41/DFF1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9423 ],
+            "D": [ 9422 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q_2_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9417 ],
+            "I3": [ 9500 ],
+            "I1": [ 9418 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9414 ],
+            "CIN": [ 9420 ]
+          }
+        },
+        "ledCounter_DFFE_Q_2": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y40/DFF5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9418 ],
+            "D": [ 9417 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q_1_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y42/ALU5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9411 ],
+            "I3": [ 9500 ],
+            "I1": [ 9412 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9415 ],
+            "CIN": [ 9414 ]
+          }
+        },
+        "ledCounter_DFFE_Q_1": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y42/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9412 ],
+            "D": [ 9411 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "ledCounter_DFFE_Q": {
+          "hide_name": 0,
+          "type": "DFFE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y42/DFF0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:19.7-19.56",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 9409 ],
+            "D": [ 9408 ],
+            "CLK": [ 9271 ],
+            "CE": [ 9276 ]
+          }
+        },
+        "clockCounter_DFFR_Q_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y38/ALU0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9274 ],
+            "I3": [ 9500 ],
+            "I1": [ 9275 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9406 ],
+            "CIN": [ 9342 ]
+          }
+        },
+        "clockCounter_DFFR_Q_9_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9401 ],
+            "I3": [ 9500 ],
+            "I1": [ 9403 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9399 ],
+            "CIN": [ 9287 ]
+          }
+        },
+        "clockCounter_DFFR_Q_9": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y39/DFF3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9403 ],
+            "D": [ 9401 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_8_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9395 ],
+            "I3": [ 9500 ],
+            "I1": [ 9397 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9393 ],
+            "CIN": [ 9399 ]
+          }
+        },
+        "clockCounter_DFFR_Q_8": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y39/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9397 ],
+            "D": [ 9395 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_7_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9390 ],
+            "I3": [ 9500 ],
+            "I1": [ 9391 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9388 ],
+            "CIN": [ 9393 ]
+          }
+        },
+        "clockCounter_DFFR_Q_7": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/DFF5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9391 ],
+            "D": [ 9390 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_6_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9385 ],
+            "I3": [ 9500 ],
+            "I1": [ 9386 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9383 ],
+            "CIN": [ 9388 ]
+          }
+        },
+        "clockCounter_DFFR_Q_6": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y39/DFF5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9386 ],
+            "D": [ 9385 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_5_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9380 ],
+            "I3": [ 9500 ],
+            "I1": [ 9381 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9378 ],
+            "CIN": [ 9383 ]
+          }
+        },
+        "clockCounter_DFFR_Q_5": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y39/DFF1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9381 ],
+            "D": [ 9380 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_4_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9375 ],
+            "I3": [ 9500 ],
+            "I1": [ 9376 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9373 ],
+            "CIN": [ 9378 ]
+          }
+        },
+        "clockCounter_DFFR_Q_4": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9376 ],
+            "D": [ 9375 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_3_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9370 ],
+            "I3": [ 9500 ],
+            "I1": [ 9371 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9368 ],
+            "CIN": [ 9373 ]
+          }
+        },
+        "clockCounter_DFFR_Q_3": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/DFF3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9371 ],
+            "D": [ 9370 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_2_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9344 ],
+            "I3": [ 9500 ],
+            "I1": [ 9345 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9341 ],
+            "CIN": [ 9368 ]
+          }
+        },
+        "clockCounter_DFFR_Q_23_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y37/LUT0",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9362 ],
+            "F": [ 9365 ]
+          }
+        },
+        "clockCounter_DFFR_Q_23": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y39/DFF0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9362 ],
+            "D": [ 9365 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_CIN_ALU_COUT": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9363 ],
+            "I3": [ 9500 ],
+            "I1": [ 9362 ],
+            "I0": [ 9500 ],
+            "COUT": [ 9360 ],
+            "CIN": [ 9507 ]
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9357 ],
+            "I3": [ 9500 ],
+            "I1": [ 9358 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9355 ],
+            "CIN": [ 9360 ]
+          }
+        },
+        "clockCounter_DFFR_Q_22": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9358 ],
+            "D": [ 9357 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_21_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9352 ],
+            "I3": [ 9500 ],
+            "I1": [ 9353 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9350 ],
+            "CIN": [ 9355 ]
+          }
+        },
+        "clockCounter_DFFR_Q_21": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/DFF3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9353 ],
+            "D": [ 9352 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_20_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9347 ],
+            "I3": [ 9500 ],
+            "I1": [ 9348 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9339 ],
+            "CIN": [ 9350 ]
+          }
+        },
+        "clockCounter_DFFR_Q_20": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9348 ],
+            "D": [ 9347 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_2": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y39/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9345 ],
+            "D": [ 9344 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_1_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y38/ALU5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9279 ],
+            "I3": [ 9500 ],
+            "I1": [ 9280 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9342 ],
+            "CIN": [ 9341 ]
+          }
+        },
+        "clockCounter_DFFR_Q_19_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y38/ALU5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9335 ],
+            "I3": [ 9500 ],
+            "I1": [ 9337 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9333 ],
+            "CIN": [ 9339 ]
+          }
+        },
+        "clockCounter_DFFR_Q_19": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y37/DFF1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9337 ],
+            "D": [ 9335 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_18_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9329 ],
+            "I3": [ 9500 ],
+            "I1": [ 9331 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9327 ],
+            "CIN": [ 9333 ]
+          }
+        },
+        "clockCounter_DFFR_Q_18": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/DFF0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9331 ],
+            "D": [ 9329 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_17_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9323 ],
+            "I3": [ 9500 ],
+            "I1": [ 9325 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9321 ],
+            "CIN": [ 9327 ]
+          }
+        },
+        "clockCounter_DFFR_Q_17": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/DFF1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9325 ],
+            "D": [ 9323 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_16_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9317 ],
+            "I3": [ 9500 ],
+            "I1": [ 9319 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9315 ],
+            "CIN": [ 9321 ]
+          }
+        },
+        "clockCounter_DFFR_Q_16": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9319 ],
+            "D": [ 9317 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_15_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9312 ],
+            "I3": [ 9500 ],
+            "I1": [ 9313 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9310 ],
+            "CIN": [ 9315 ]
+          }
+        },
+        "clockCounter_DFFR_Q_15": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/DFF3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9313 ],
+            "D": [ 9312 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_14_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9307 ],
+            "I3": [ 9500 ],
+            "I1": [ 9308 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9305 ],
+            "CIN": [ 9310 ]
+          }
+        },
+        "clockCounter_DFFR_Q_14": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/DFF4",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9308 ],
+            "D": [ 9307 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_13_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y38/ALU5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9302 ],
+            "I3": [ 9500 ],
+            "I1": [ 9303 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9300 ],
+            "CIN": [ 9305 ]
+          }
+        },
+        "clockCounter_DFFR_Q_13": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y39/DFF3",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9303 ],
+            "D": [ 9302 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_12_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9297 ],
+            "I3": [ 9500 ],
+            "I1": [ 9298 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9295 ],
+            "CIN": [ 9300 ]
+          }
+        },
+        "clockCounter_DFFR_Q_12": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y39/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9298 ],
+            "D": [ 9297 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_11_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9291 ],
+            "I3": [ 9500 ],
+            "I1": [ 9293 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9286 ],
+            "CIN": [ 9295 ]
+          }
+        },
+        "clockCounter_DFFR_Q_11": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y39/DFF0",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9293 ],
+            "D": [ 9291 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_10_D_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/ALU2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 9500 ],
+            "SUM": [ 9282 ],
+            "I3": [ 9500 ],
+            "I1": [ 9284 ],
+            "I0": [ 9501 ],
+            "COUT": [ 9287 ],
+            "CIN": [ 9286 ]
+          }
+        },
+        "clockCounter_DFFR_Q_10": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y38/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9284 ],
+            "D": [ 9282 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q_1": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y39/DFF2",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9280 ],
+            "D": [ 9279 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clockCounter_DFFR_Q": {
+          "hide_name": 0,
+          "type": "DFFR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X5Y38/DFF5",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:12.1-18.4|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:31.7-31.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "RESET": "input",
+            "Q": "output",
+            "D": "input",
+            "CLK": "input"
+          },
+          "connections": {
+            "RESET": [ 9276 ],
+            "Q": [ 9275 ],
+            "D": [ 9274 ],
+            "CLK": [ 9271 ]
+          }
+        },
+        "clk_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y6/IOBA",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:3.11-3.14",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9271 ],
+            "I": [ 9267 ]
+          }
+        }
+      },
+      "netnames": {
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "bits": [ 9507 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/COUT0;;1"
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_CIN_ALU_COUT_HEAD_ALULC": {
+          "hide_name": 0,
+          "bits": [ 9505 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/COUT0;;1"
+          }
+        },
+        "led[0]": {
+          "hide_name": 0,
+          "bits": [ 9483 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led[1]": {
+          "hide_name": 0,
+          "bits": [ 9481 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led[2]": {
+          "hide_name": 0,
+          "bits": [ 9479 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led[3]": {
+          "hide_name": 0,
+          "bits": [ 9477 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led[4]": {
+          "hide_name": 0,
+          "bits": [ 9475 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led[5]": {
+          "hide_name": 0,
+          "bits": [ 9473 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:4.18-4.21"
+          }
+        },
+        "led_OBUF_O_I[4]": {
+          "hide_name": 0,
+          "bits": [ 9471 ] ,
+          "attributes": {
+            "ROUTING": "X1Y44/F2;;1;X1Y44/W100;X1Y44/W100/F2;1;X0Y44/S200;X0Y44/S200/W101;1;X0Y46/D1;X0Y46/D1/S202;1"
+          }
+        },
+        "led_OBUF_O_I[5]": {
+          "hide_name": 0,
+          "bits": [ 9469 ] ,
+          "attributes": {
+            "ROUTING": "X2Y43/F1;;1;X2Y43/S130;X2Y43/S130/F1;1;X2Y44/W270;X2Y44/W270/S131;1;X0Y44/S270;X0Y44/S270/W272;1;X0Y46/A0;X0Y46/A0/S272;1"
+          }
+        },
+        "led_OBUF_O_I[1]": {
+          "hide_name": 0,
+          "bits": [ 9467 ] ,
+          "attributes": {
+            "ROUTING": "X1Y48/F0;;1;X1Y48/EW10;X1Y48/EW10/F0;1;X0Y48/S250;X0Y48/S250/W111;1;X0Y50/A0;X0Y50/A0/S252;1"
+          }
+        },
+        "led_OBUF_O_I[2]": {
+          "hide_name": 0,
+          "bits": [ 9465 ] ,
+          "attributes": {
+            "ROUTING": "X1Y43/F5;;1;X1Y43/S100;X1Y43/S100/F5;1;X1Y44/S800;X1Y44/S800/S101;1;X1Y48/W200;X1Y48/W200/S804;1;X0Y48/D1;X0Y48/D1/W201;1"
+          }
+        },
+        "led_OBUF_O_I[3]": {
+          "hide_name": 0,
+          "bits": [ 9463 ] ,
+          "attributes": {
+            "ROUTING": "X1Y46/F2;;1;X1Y46/W130;X1Y46/W130/F2;1;X0Y46/S270;X0Y46/S270/W131;1;X0Y48/A0;X0Y48/A0/S272;1"
+          }
+        },
+        "ledCounter_DFFE_Q_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9459 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_S0[4]": {
+          "hide_name": 0,
+          "bits": [ 9451 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/F7;;1;X1Y38/SN20;X1Y38/SN20/F7;1;X1Y37/E260;X1Y37/E260/N121;1;X2Y37/SEL0;X2Y37/SEL0/E261;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_I1": {
+          "hide_name": 0,
+          "bits": [ 9450 ] ,
+          "attributes": {
+            "ROUTING": "X2Y37/F1;;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_1_I0": {
+          "hide_name": 0,
+          "bits": [ 9449 ] ,
+          "attributes": {
+            "ROUTING": "X2Y37/F0;;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[4]": {
+          "hide_name": 0,
+          "bits": [ 9447 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/F6;;1;X2Y39/X07;X2Y39/X07/F6;1;X2Y39/SEL0;X2Y39/SEL0/X07;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 9446 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/F1;;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 9445 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/F0;;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 9441 ] ,
+          "attributes": {
+            "ROUTING": "X2Y37/OF0;;1;X2Y37/SN10;X2Y37/SN10/OF0;1;X2Y38/S250;X2Y38/S250/S111;1;X2Y39/X04;X2Y39/X04/S251;1;X2Y39/D7;X2Y39/D7/X04;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 9440 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/OF0;;1;X2Y39/E100;X2Y39/E100/OF0;1;X2Y39/E220;X2Y39/E220/E100;1;X2Y39/C7;X2Y39/C7/E220;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 9439 ] ,
+          "attributes": {
+            "ROUTING": "X4Y39/F0;;1;X4Y39/W200;X4Y39/W200/F0;1;X2Y39/X05;X2Y39/X05/W202;1;X2Y39/B7;X2Y39/B7/X05;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_CE_LUT4_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 9438 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F7;;1;X3Y38/W130;X3Y38/W130/F7;1;X2Y38/S230;X2Y38/S230/W131;1;X2Y39/A7;X2Y39/A7/S231;1",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_5_I": {
+          "hide_name": 0,
+          "bits": [ 9436 ] ,
+          "attributes": {
+            "ROUTING": "X1Y40/S810;X1Y40/S810/F2;1;X1Y48/S220;X1Y48/S220/S818;1;X1Y50/W220;X1Y50/W220/S222;1;X0Y50/D1;X0Y50/D1/W221;1;X1Y40/F2;;1;X1Y40/D0;X1Y40/D0/F2;1;X1Y40/XD0;X1Y40/XD0/D0;1"
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_CIN_ALU_COUT_SUM": {
+          "hide_name": 0,
+          "bits": [ 9433 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "ledCounter[0]": {
+          "hide_name": 0,
+          "bits": [ 9432 ] ,
+          "attributes": {
+            "ROUTING": "X1Y40/E200;X1Y40/E200/Q0;1;X1Y40/A2;X1Y40/A2/E200;1;X1Y40/Q0;;1;X1Y40/S200;X1Y40/S200/Q0;1;X1Y42/X07;X1Y42/X07/S202;1;X1Y42/B1;X1Y42/B1/X07;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 9430 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/COUT1;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter[1]": {
+          "hide_name": 0,
+          "bits": [ 9428 ] ,
+          "attributes": {
+            "ROUTING": "X2Y41/S820;X2Y41/S820/Q4;1;X2Y49/N130;X2Y49/N130/S828;1;X2Y48/W270;X2Y48/W270/N131;1;X1Y48/A0;X1Y48/A0/W271;1;X2Y41/Q4;;1;X2Y41/S130;X2Y41/S130/Q4;1;X2Y42/W230;X2Y42/W230/S131;1;X1Y42/B2;X1Y42/B2/W231;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_4_D": {
+          "hide_name": 0,
+          "bits": [ 9427 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/F2;;1;X1Y42/SN10;X1Y42/SN10/F2;1;X1Y41/E250;X1Y41/E250/N111;1;X2Y41/A4;X2Y41/A4/E251;1;X2Y41/XD4;X2Y41/XD4/A4;1"
+          }
+        },
+        "ledCounter_DFFE_Q_4_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9425 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/COUT2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter[2]": {
+          "hide_name": 0,
+          "bits": [ 9423 ] ,
+          "attributes": {
+            "ROUTING": "X2Y41/W130;X2Y41/W130/Q1;1;X1Y41/S230;X1Y41/S230/W131;1;X1Y43/A5;X1Y43/A5/S232;1;X2Y41/Q1;;1;X2Y41/SN10;X2Y41/SN10/Q1;1;X2Y42/W210;X2Y42/W210/S111;1;X1Y42/B3;X1Y42/B3/W211;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_3_D": {
+          "hide_name": 0,
+          "bits": [ 9422 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/F3;;1;X1Y42/N100;X1Y42/N100/F3;1;X1Y41/E200;X1Y41/E200/N101;1;X2Y41/D1;X2Y41/D1/E201;1;X2Y41/XD1;X2Y41/XD1/D1;1"
+          }
+        },
+        "ledCounter_DFFE_Q_3_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9420 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/COUT3;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter[3]": {
+          "hide_name": 0,
+          "bits": [ 9418 ] ,
+          "attributes": {
+            "ROUTING": "X2Y40/S830;X2Y40/S830/Q5;1;X2Y48/N250;X2Y48/N250/S838;1;X2Y46/W250;X2Y46/W250/N252;1;X1Y46/A2;X1Y46/A2/W251;1;X2Y40/Q5;;1;X2Y40/W130;X2Y40/W130/Q5;1;X1Y40/S270;X1Y40/S270/W131;1;X1Y42/B4;X1Y42/B4/S272;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 9417 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/F4;;1;X1Y42/EW20;X1Y42/EW20/F4;1;X2Y42/N220;X2Y42/N220/E121;1;X2Y40/C5;X2Y40/C5/N222;1;X2Y40/XD5;X2Y40/XD5/C5;1"
+          }
+        },
+        "ledCounter_DFFE_Q_1_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9415 ] ,
+          "attributes": {
+            "ROUTING": "X2Y42/CIN0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter_DFFE_Q_2_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9414 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/COUT4;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:16.23-16.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "ledCounter[4]": {
+          "hide_name": 0,
+          "bits": [ 9412 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/S250;X1Y42/S250/W111;1;X1Y44/A2;X1Y44/A2/S252;1;X2Y42/Q4;;1;X2Y42/EW10;X2Y42/EW10/Q4;1;X1Y42/B5;X1Y42/B5/W111;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_1_D": {
+          "hide_name": 0,
+          "bits": [ 9411 ] ,
+          "attributes": {
+            "ROUTING": "X1Y42/F5;;1;X1Y42/EW10;X1Y42/EW10/F5;1;X2Y42/A4;X2Y42/A4/E111;1;X2Y42/XD4;X2Y42/XD4/A4;1"
+          }
+        },
+        "ledCounter[5]": {
+          "hide_name": 0,
+          "bits": [ 9409 ] ,
+          "attributes": {
+            "ROUTING": "X2Y42/S130;X2Y42/S130/Q0;1;X2Y43/A1;X2Y43/A1/S131;1;X2Y42/Q0;;1;X2Y42/X05;X2Y42/X05/Q0;1;X2Y42/B0;X2Y42/B0/X05;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:8.11-8.21"
+          }
+        },
+        "ledCounter_DFFE_Q_D": {
+          "hide_name": 0,
+          "bits": [ 9408 ] ,
+          "attributes": {
+            "ROUTING": "X2Y42/F0;;1;X2Y42/XD0;X2Y42/XD0/F0;1"
+          }
+        },
+        "clockCounter_DFFR_Q_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9406 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[14]": {
+          "hide_name": 0,
+          "bits": [ 9403 ] ,
+          "attributes": {
+            "ROUTING": "X3Y39/N230;X3Y39/N230/Q3;1;X3Y38/B3;X3Y38/B3/N231;1;X3Y39/Q3;;1;X3Y39/EW10;X3Y39/EW10/Q3;1;X2Y39/B1;X2Y39/B1/W111;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_9_D": {
+          "hide_name": 0,
+          "bits": [ 9401 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F3;;1;X3Y38/S100;X3Y38/S100/F3;1;X3Y39/C3;X3Y39/C3/S101;1;X3Y39/XD3;X3Y39/XD3/C3;1"
+          }
+        },
+        "clockCounter_DFFR_Q_9_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9399 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/COUT3;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[15]": {
+          "hide_name": 0,
+          "bits": [ 9397 ] ,
+          "attributes": {
+            "ROUTING": "X3Y39/N100;X3Y39/N100/Q4;1;X3Y38/B4;X3Y38/B4/N101;1;X3Y39/Q4;;1;X3Y39/W130;X3Y39/W130/Q4;1;X2Y39/A1;X2Y39/A1/W131;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_8_D": {
+          "hide_name": 0,
+          "bits": [ 9395 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F4;;1;X3Y38/S130;X3Y38/S130/F4;1;X3Y39/C4;X3Y39/C4/S131;1;X3Y39/XD4;X3Y39/XD4/C4;1"
+          }
+        },
+        "clockCounter_DFFR_Q_8_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9393 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/COUT4;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[16]": {
+          "hide_name": 0,
+          "bits": [ 9391 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/E250;X3Y38/E250/Q5;1;X3Y38/B5;X3Y38/B5/E250;1;X3Y38/Q5;;1;X3Y38/X04;X3Y38/X04/Q5;1;X3Y38/D7;X3Y38/D7/X04;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_7_D": {
+          "hide_name": 0,
+          "bits": [ 9390 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F5;;1;X3Y38/XD5;X3Y38/XD5/F5;1"
+          }
+        },
+        "clockCounter_DFFR_Q_7_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9388 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/CIN0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[17]": {
+          "hide_name": 0,
+          "bits": [ 9386 ] ,
+          "attributes": {
+            "ROUTING": "X4Y39/N130;X4Y39/N130/Q5;1;X4Y38/B0;X4Y38/B0/N131;1;X4Y39/Q5;;1;X4Y39/W100;X4Y39/W100/Q5;1;X3Y39/N200;X3Y39/N200/W101;1;X3Y38/C7;X3Y38/C7/N201;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_6_D": {
+          "hide_name": 0,
+          "bits": [ 9385 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F0;;1;X4Y38/SN20;X4Y38/SN20/F0;1;X4Y39/B5;X4Y39/B5/S121;1;X4Y39/XD5;X4Y39/XD5/B5;1"
+          }
+        },
+        "clockCounter_DFFR_Q_6_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9383 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/COUT0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[18]": {
+          "hide_name": 0,
+          "bits": [ 9381 ] ,
+          "attributes": {
+            "ROUTING": "X4Y39/N210;X4Y39/N210/Q1;1;X4Y38/B1;X4Y38/B1/N211;1;X4Y39/Q1;;1;X4Y39/EW10;X4Y39/EW10/Q1;1;X3Y39/N250;X3Y39/N250/W111;1;X3Y38/B7;X3Y38/B7/N251;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_5_D": {
+          "hide_name": 0,
+          "bits": [ 9380 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F1;;1;X4Y38/S130;X4Y38/S130/F1;1;X4Y39/A1;X4Y39/A1/S131;1;X4Y39/XD1;X4Y39/XD1/A1;1"
+          }
+        },
+        "clockCounter_DFFR_Q_5_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9378 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/COUT1;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[19]": {
+          "hide_name": 0,
+          "bits": [ 9376 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/X01;X4Y38/X01/Q2;1;X4Y38/B2;X4Y38/B2/X01;1;X4Y38/Q2;;1;X4Y38/W130;X4Y38/W130/Q2;1;X3Y38/A7;X3Y38/A7/W131;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_4_D": {
+          "hide_name": 0,
+          "bits": [ 9375 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F2;;1;X4Y38/XD2;X4Y38/XD2/F2;1"
+          }
+        },
+        "clockCounter_DFFR_Q_4_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9373 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/COUT2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[20]": {
+          "hide_name": 0,
+          "bits": [ 9371 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/B3;X4Y38/B3/Q3;1;X4Y38/Q3;;1;X4Y38/S230;X4Y38/S230/Q3;1;X4Y39/X08;X4Y39/X08/S231;1;X4Y39/D0;X4Y39/D0/X08;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_3_D": {
+          "hide_name": 0,
+          "bits": [ 9370 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F3;;1;X4Y38/XD3;X4Y38/XD3/F3;1"
+          }
+        },
+        "clockCounter_DFFR_Q_3_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9368 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/COUT3;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter_DFFR_Q_23_D": {
+          "hide_name": 0,
+          "bits": [ 9365 ] ,
+          "attributes": {
+            "ROUTING": "X1Y37/F0;;1;X1Y37/S200;X1Y37/S200/F0;1;X1Y39/D0;X1Y39/D0/S202;1;X1Y39/XD0;X1Y39/XD0/D0;1"
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_CIN_ALU_COUT_SUM": {
+          "hide_name": 0,
+          "bits": [ 9363 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "clockCounter[0]": {
+          "hide_name": 0,
+          "bits": [ 9362 ] ,
+          "attributes": {
+            "ROUTING": "X1Y39/N200;X1Y39/N200/Q0;1;X1Y37/X03;X1Y37/X03/N202;1;X1Y37/A0;X1Y37/A0/X03;1;X1Y38/D7;X1Y38/D7/N131;1;X1Y39/Q0;;1;X1Y39/N130;X1Y39/N130/Q0;1;X1Y38/B1;X1Y38/B1/N131;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 9360 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/COUT1;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[1]": {
+          "hide_name": 0,
+          "bits": [ 9358 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/X05;X1Y38/X05/Q2;1;X1Y38/C7;X1Y38/C7/X05;1;X1Y38/Q2;;1;X1Y38/X01;X1Y38/X01/Q2;1;X1Y38/B2;X1Y38/B2/X01;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_22_D": {
+          "hide_name": 0,
+          "bits": [ 9357 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/F2;;1;X1Y38/XD2;X1Y38/XD2/F2;1"
+          }
+        },
+        "clockCounter_DFFR_Q_22_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9355 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/COUT2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[2]": {
+          "hide_name": 0,
+          "bits": [ 9353 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/W130;X1Y38/W130/Q3;1;X1Y38/B7;X1Y38/B7/W130;1;X1Y38/Q3;;1;X1Y38/B3;X1Y38/B3/Q3;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_21_D": {
+          "hide_name": 0,
+          "bits": [ 9352 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/F3;;1;X1Y38/XD3;X1Y38/XD3/F3;1"
+          }
+        },
+        "clockCounter_DFFR_Q_21_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9350 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/COUT3;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[3]": {
+          "hide_name": 0,
+          "bits": [ 9348 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/E130;X1Y38/E130/Q4;1;X1Y38/A7;X1Y38/A7/E130;1;X1Y38/Q4;;1;X1Y38/W100;X1Y38/W100/Q4;1;X1Y38/B4;X1Y38/B4/W100;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_20_D": {
+          "hide_name": 0,
+          "bits": [ 9347 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/F4;;1;X1Y38/XD4;X1Y38/XD4/F4;1"
+          }
+        },
+        "clockCounter[21]": {
+          "hide_name": 0,
+          "bits": [ 9345 ] ,
+          "attributes": {
+            "ROUTING": "X4Y39/E100;X4Y39/E100/Q4;1;X4Y39/C0;X4Y39/C0/E100;1;X4Y39/Q4;;1;X4Y39/N100;X4Y39/N100/Q4;1;X4Y38/B4;X4Y38/B4/N101;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 9344 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F4;;1;X4Y38/SN10;X4Y38/SN10/F4;1;X4Y39/D4;X4Y39/D4/S111;1;X4Y39/XD4;X4Y39/XD4/D4;1"
+          }
+        },
+        "clockCounter_DFFR_Q_D_ALU_SUM_CIN": {
+          "hide_name": 0,
+          "bits": [ 9342 ] ,
+          "attributes": {
+            "ROUTING": "X5Y38/CIN0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter_DFFR_Q_2_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9341 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/COUT4;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter_DFFR_Q_20_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9339 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/COUT4;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[4]": {
+          "hide_name": 0,
+          "bits": [ 9337 ] ,
+          "attributes": {
+            "ROUTING": "X1Y37/E100;X1Y37/E100/Q1;1;X2Y37/D1;X2Y37/D1/E101;1;X1Y37/Q1;;1;X1Y37/SN20;X1Y37/SN20/Q1;1;X1Y38/B5;X1Y38/B5/S121;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_19_D": {
+          "hide_name": 0,
+          "bits": [ 9335 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/F5;;1;X1Y38/SN10;X1Y38/SN10/F5;1;X1Y37/A1;X1Y37/A1/N111;1;X1Y37/XD1;X1Y37/XD1/A1;1"
+          }
+        },
+        "clockCounter_DFFR_Q_19_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9333 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/CIN0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[5]": {
+          "hide_name": 0,
+          "bits": [ 9331 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/X05;X2Y38/X05/Q0;1;X2Y38/B0;X2Y38/B0/X05;1;X2Y38/Q0;;1;X2Y38/SN20;X2Y38/SN20/Q0;1;X2Y37/C1;X2Y37/C1/N121;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_18_D": {
+          "hide_name": 0,
+          "bits": [ 9329 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F0;;1;X2Y38/XD0;X2Y38/XD0/F0;1"
+          }
+        },
+        "clockCounter_DFFR_Q_18_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9327 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/COUT0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[6]": {
+          "hide_name": 0,
+          "bits": [ 9325 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/B1;X2Y38/B1/Q1;1;X2Y38/Q1;;1;X2Y38/N130;X2Y38/N130/Q1;1;X2Y37/B1;X2Y37/B1/N131;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_17_D": {
+          "hide_name": 0,
+          "bits": [ 9323 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F1;;1;X2Y38/XD1;X2Y38/XD1/F1;1"
+          }
+        },
+        "clockCounter_DFFR_Q_17_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9321 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/COUT1;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[7]": {
+          "hide_name": 0,
+          "bits": [ 9319 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/X01;X2Y38/X01/Q2;1;X2Y38/B2;X2Y38/B2/X01;1;X2Y38/Q2;;1;X2Y38/N100;X2Y38/N100/Q2;1;X2Y37/N200;X2Y37/N200/N101;1;X2Y37/A1;X2Y37/A1/N200;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_16_D": {
+          "hide_name": 0,
+          "bits": [ 9317 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F2;;1;X2Y38/XD2;X2Y38/XD2/F2;1"
+          }
+        },
+        "clockCounter_DFFR_Q_16_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9315 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/COUT2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[8]": {
+          "hide_name": 0,
+          "bits": [ 9313 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/B3;X2Y38/B3/Q3;1;X2Y38/Q3;;1;X2Y38/SN10;X2Y38/SN10/Q3;1;X2Y39/D6;X2Y39/D6/S111;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_15_D": {
+          "hide_name": 0,
+          "bits": [ 9312 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F3;;1;X2Y38/XD3;X2Y38/XD3/F3;1"
+          }
+        },
+        "clockCounter_DFFR_Q_15_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9310 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/COUT3;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[9]": {
+          "hide_name": 0,
+          "bits": [ 9308 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/N130;X2Y39/N130/Q4;1;X2Y39/C6;X2Y39/C6/N130;1;X2Y39/Q4;;1;X2Y39/N100;X2Y39/N100/Q4;1;X2Y38/B4;X2Y38/B4/N101;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_14_D": {
+          "hide_name": 0,
+          "bits": [ 9307 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F4;;1;X2Y38/S100;X2Y38/S100/F4;1;X2Y39/A4;X2Y39/A4/S101;1;X2Y39/XD4;X2Y39/XD4/A4;1"
+          }
+        },
+        "clockCounter_DFFR_Q_14_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9305 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/COUT4;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[10]": {
+          "hide_name": 0,
+          "bits": [ 9303 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/W130;X2Y39/W130/Q3;1;X2Y39/B6;X2Y39/B6/W130;1;X2Y39/Q3;;1;X2Y39/N230;X2Y39/N230/Q3;1;X2Y38/X08;X2Y38/X08/N231;1;X2Y38/B5;X2Y38/B5/X08;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_13_D": {
+          "hide_name": 0,
+          "bits": [ 9302 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/F5;;1;X2Y38/S130;X2Y38/S130/F5;1;X2Y39/A3;X2Y39/A3/S131;1;X2Y39/XD3;X2Y39/XD3/A3;1"
+          }
+        },
+        "clockCounter_DFFR_Q_13_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9300 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/CIN0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[11]": {
+          "hide_name": 0,
+          "bits": [ 9298 ] ,
+          "attributes": {
+            "ROUTING": "X3Y39/W100;X3Y39/W100/Q2;1;X2Y39/W200;X2Y39/W200/W101;1;X2Y39/A6;X2Y39/A6/W200;1;X3Y39/Q2;;1;X3Y39/SN10;X3Y39/SN10/Q2;1;X3Y38/W250;X3Y38/W250/N111;1;X3Y38/B0;X3Y38/B0/W250;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_12_D": {
+          "hide_name": 0,
+          "bits": [ 9297 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F0;;1;X3Y38/SN20;X3Y38/SN20/F0;1;X3Y39/D2;X3Y39/D2/S121;1;X3Y39/XD2;X3Y39/XD2/D2;1"
+          }
+        },
+        "clockCounter_DFFR_Q_12_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9295 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/COUT0;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[12]": {
+          "hide_name": 0,
+          "bits": [ 9293 ] ,
+          "attributes": {
+            "ROUTING": "X3Y39/EW20;X3Y39/EW20/Q0;1;X2Y39/D1;X2Y39/D1/W121;1;X3Y39/Q0;;1;X3Y39/N130;X3Y39/N130/Q0;1;X3Y38/B1;X3Y38/B1/N131;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_11_D": {
+          "hide_name": 0,
+          "bits": [ 9291 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F1;;1;X3Y38/SN10;X3Y38/SN10/F1;1;X3Y39/B0;X3Y39/B0/S111;1;X3Y39/XD0;X3Y39/XD0/B0;1"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 9501 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/A0;X2Y38/A0/E251;1;X3Y38/A5;X3Y38/A5/W210;1;X1Y38/A2;X1Y38/A2/N210;1;X4Y38/A4;X4Y38/A4/W210;1;X3Y38/W210;X3Y38/W210/VSS;1;X3Y38/A4;X3Y38/A4/W210;1;X1Y38/N210;X1Y38/N210/VSS;1;X1Y38/A3;X1Y38/A3/N210;1;X3Y38/A3;X3Y38/A3/N210;1;X2Y38/A4;X2Y38/A4/E251;1;X1Y38/E250;X1Y38/E250/VSS;1;X2Y38/A1;X2Y38/A1/E251;1;X1Y38/A4;X1Y38/A4/W210;1;X4Y38/W210;X4Y38/W210/VSS;1;X4Y38/A5;X4Y38/A5/W210;1;X4Y38/A3;X4Y38/A3/N210;1;X1Y42/A3;X1Y42/A3/N210;1;X4Y38/A1;X4Y38/A1/E210;1;X1Y42/N210;X1Y42/N210/VSS;1;X1Y42/A2;X1Y42/A2/N210;1;X2Y38/A2;X2Y38/A2/N210;1;X1Y38/W210;X1Y38/W210/VSS;1;X1Y38/A5;X1Y38/A5/W210;1;X2Y37/S230;X2Y37/S230/VSS;1;X2Y38/A5;X2Y38/A5/S231;1;X3Y38/A0;X3Y38/A0/E210;1;X2Y38/N210;X2Y38/N210/VSS;1;X2Y38/A3;X2Y38/A3/N210;1;X2Y42/E210;X2Y42/E210/VSS;1;X2Y42/A0;X2Y42/A0/E210;1;X3Y38/E210;X3Y38/E210/VSS;1;X3Y38/A1;X3Y38/A1/E210;1;X4Y38/E210;X4Y38/E210/VSS;1;X4Y38/A0;X4Y38/A0/E210;1;X1Y42/A4;X1Y42/A4/W210;1;X1Y42/W210;X1Y42/W210/VSS;1;X1Y42/A5;X1Y42/A5/W210;1;X4Y38/N210;X4Y38/N210/VSS;1;X4Y38/A2;X4Y38/A2/N210;1;X5Y38/E210;X5Y38/E210/VSS;1;X5Y38/A0;X5Y38/A0/E210;1;X0Y0/VSS;;1;X3Y38/N210;X3Y38/N210/VSS;1;X3Y38/A2;X3Y38/A2/N210;1"
+          }
+        },
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 9500 ] ,
+          "attributes": {
+            "ROUTING": "X1Y38/D3;X1Y38/D3/X03;1;X3Y38/D4;X3Y38/D4/X07;1;X1Y42/C2;X1Y42/C2/X04;1;X1Y42/D1;X1Y42/D1/X03;1;X1Y42/C4;X1Y42/C4/X08;1;X3Y38/C3;X3Y38/C3/W220;1;X4Y38/D2;X4Y38/D2/X08;1;X3Y38/D1;X3Y38/D1/X03;1;X2Y38/D2;X2Y38/D2/X03;1;X1Y38/C3;X1Y38/C3/X04;1;X4Y38/C0;X4Y38/C0/X04;1;X4Y38/C3;X4Y38/C3/X04;1;X2Y38/C1;X2Y38/C1/X04;1;X4Y38/D0;X4Y38/D0/X08;1;X1Y42/C1;X1Y42/C1/X04;1;X4Y38/C2;X4Y38/C2/X04;1;X3Y38/C4;X3Y38/C4/X08;1;X2Y38/C5;X2Y38/C5/S220;1;X1Y42/D3;X1Y42/D3/X03;1;X4Y38/D4;X4Y38/D4/X04;1;X1Y38/C0;X1Y38/C0/X04;1;X50Y27/S220;X50Y27/S220/VCC;1;X50Y27/C4;X50Y27/C4/S220;1;X1Y42/D2;X1Y42/D2/X08;1;X1Y42/C3;X1Y42/C3/X04;1;X2Y38/S220;X2Y38/S220/VCC;1;X2Y38/C4;X2Y38/C4/S220;1;X1Y38/C5;X1Y38/C5/X08;1;X4Y38/D3;X4Y38/D3/X08;1;X5Y38/X03;X5Y38/X03/VCC;1;X5Y38/D0;X5Y38/D0/X03;1;X2Y38/C2;X2Y38/C2/X04;1;X3Y38/D2;X3Y38/D2/X03;1;X1Y38/C1;X1Y38/C1/X04;1;X3Y38/X08;X3Y38/X08/VCC;1;X3Y38/C5;X3Y38/C5/X08;1;X1Y38/D5;X1Y38/D5/X04;1;X2Y38/D4;X2Y38/D4/X04;1;X2Y38/C3;X2Y38/C3/X04;1;X3Y38/C1;X3Y38/C1/N220;1;X2Y38/D0;X2Y38/D0/X03;1;X3Y38/X03;X3Y38/X03/VCC;1;X3Y38/D3;X3Y38/D3/X03;1;X1Y38/X04;X1Y38/X04/VCC;1;X1Y38/C2;X1Y38/C2/X04;1;X4Y38/D1;X4Y38/D1/X08;1;X1Y42/D5;X1Y42/D5/X04;1;X2Y38/X03;X2Y38/X03/VCC;1;X2Y38/D1;X2Y38/D1/X03;1;X1Y42/X08;X1Y42/X08/VCC;1;X1Y42/C5;X1Y42/C5/X08;1;X2Y38/D5;X2Y38/D5/X04;1;X3Y38/N220;X3Y38/N220/VCC;1;X3Y38/C0;X3Y38/C0/N220;1;X1Y42/X03;X1Y42/X03/VCC;1;X1Y42/A1;X1Y42/A1/X03;1;X1Y38/D1;X1Y38/D1/X03;1;X3Y38/W220;X3Y38/W220/VCC;1;X3Y38/C2;X3Y38/C2/W220;1;X2Y38/E260;X2Y38/E260/VCC;1;X2Y38/D3;X2Y38/D3/E260;1;X1Y38/D2;X1Y38/D2/X03;1;X3Y38/E270;X3Y38/E270/VCC;1;X3Y38/D0;X3Y38/D0/E270;1;X2Y42/X03;X2Y42/X03/VCC;1;X2Y42/D0;X2Y42/D0/X03;1;X1Y42/C0;X1Y42/C0/X04;1;X1Y38/X03;X1Y38/X03/VCC;1;X1Y38/A1;X1Y38/A1/X03;1;X3Y38/X07;X3Y38/X07/VCC;1;X3Y38/D5;X3Y38/D5/X07;1;X2Y42/X04;X2Y42/X04/VCC;1;X2Y42/C0;X2Y42/C0/X04;1;X2Y38/X04;X2Y38/X04/VCC;1;X2Y38/C0;X2Y38/C0/X04;1;X4Y38/C5;X4Y38/C5/X08;1;X4Y38/D5;X4Y38/D5/X04;1;X4Y38/X08;X4Y38/X08/VCC;1;X4Y38/C4;X4Y38/C4/X08;1;X1Y38/N260;X1Y38/N260/VCC;1;X1Y38/D4;X1Y38/D4/N260;1;X1Y38/X08;X1Y38/X08/VCC;1;X1Y38/C4;X1Y38/C4/X08;1;X4Y38/X04;X4Y38/X04/VCC;1;X4Y38/C1;X4Y38/C1/X04;1;X1Y42/X04;X1Y42/X04/VCC;1;X1Y42/D4;X1Y42/D4/X04;1;X0Y0/VCC;;1;X5Y38/N220;X5Y38/N220/VCC;1;X5Y38/C0;X5Y38/C0/N220;1"
+          }
+        },
+        "clockCounter_DFFR_Q_10_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9287 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/COUT2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter_DFFR_Q_11_D_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 9286 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/COUT1;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:13.21-13.37|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "clockCounter[13]": {
+          "hide_name": 0,
+          "bits": [ 9284 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/X01;X3Y38/X01/Q2;1;X3Y38/B2;X3Y38/B2/X01;1;X3Y38/Q2;;1;X3Y38/W100;X3Y38/W100/Q2;1;X2Y38/S240;X2Y38/S240/W101;1;X2Y39/C1;X2Y39/C1/S241;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "c:\\Users\\patog\\DOWNLO~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "clockCounter_DFFR_Q_10_D": {
+          "hide_name": 0,
+          "bits": [ 9282 ] ,
+          "attributes": {
+            "ROUTING": "X3Y38/F2;;1;X3Y38/XD2;X3Y38/XD2/F2;1"
+          }
+        },
+        "clockCounter[22]": {
+          "hide_name": 0,
+          "bits": [ 9280 ] ,
+          "attributes": {
+            "ROUTING": "X4Y39/SN10;X4Y39/SN10/Q2;1;X4Y38/E250;X4Y38/E250/N111;1;X4Y38/B5;X4Y38/B5/E250;1;X4Y39/B0;X4Y39/B0/X05;1;X4Y39/X05;X4Y39/X05/Q2;1;X4Y39/Q2;;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_1_D": {
+          "hide_name": 0,
+          "bits": [ 9279 ] ,
+          "attributes": {
+            "ROUTING": "X4Y38/F5;;1;X4Y38/S100;X4Y38/S100/F5;1;X4Y39/C2;X4Y39/C2/S101;1;X4Y39/XD2;X4Y39/XD2/C2;1"
+          }
+        },
+        "ledCounter_DFFE_Q_CE": {
+          "hide_name": 0,
+          "bits": [ 9276 ] ,
+          "attributes": {
+            "ROUTING": "X2Y39/LSR1;X2Y39/LSR1/X08;1;X2Y39/X08;X2Y39/X08/F7;1;X2Y39/LSR2;X2Y39/LSR2/X08;1;X1Y38/LSR1;X1Y38/LSR1/W211;1;X1Y38/LSR2;X1Y38/LSR2/W211;1;X3Y39/LSR1;X3Y39/LSR1/E271;1;X2Y38/LSR1;X2Y38/LSR1/N271;1;X3Y39/LSR0;X3Y39/LSR0/E271;1;X2Y39/N270;X2Y39/N270/F7;1;X2Y38/LSR0;X2Y38/LSR0/N271;1;X2Y39/W270;X2Y39/W270/F7;1;X1Y39/X08;X1Y39/X08/W271;1;X1Y39/LSR0;X1Y39/LSR0/X08;1;X3Y39/LSR2;X3Y39/LSR2/E271;1;X2Y38/W210;X2Y38/W210/N111;1;X4Y39/LSR1;X4Y39/LSR1/E272;1;X3Y38/LSR2;X3Y38/LSR2/E211;1;X3Y38/LSR1;X3Y38/LSR1/E211;1;X2Y41/CE2;X2Y41/CE2/X08;1;X1Y39/N270;X1Y39/N270/W271;1;X4Y39/LSR2;X4Y39/LSR2/E272;1;X2Y39/S270;X2Y39/S270/F7;1;X2Y41/X08;X2Y41/X08/S272;1;X2Y41/CE0;X2Y41/CE0/X08;1;X2Y40/W210;X2Y40/W210/S111;1;X1Y40/CE0;X1Y40/CE0/W211;1;X2Y39/E270;X2Y39/E270/F7;1;X4Y39/LSR0;X4Y39/LSR0/E272;1;X2Y42/CE2;X2Y42/CE2/S212;1;X2Y40/S210;X2Y40/S210/S111;1;X2Y42/CE0;X2Y42/CE0/S212;1;X2Y39/SN10;X2Y39/SN10/F7;1;X2Y38/E210;X2Y38/E210/N111;1;X4Y38/LSR1;X4Y38/LSR1/E212;1;X2Y40/X06;X2Y40/X06/S271;1;X1Y37/LSR0;X1Y37/LSR0/N272;1;X2Y40/CE2;X2Y40/CE2/X06;1;X2Y39/F7;;1;X2Y39/W820;X2Y39/W820/F7;1;X5Y39/N270;X5Y39/N270/E828;1;X5Y38/LSR2;X5Y38/LSR2/N271;1"
+          }
+        },
+        "clockCounter[23]": {
+          "hide_name": 0,
+          "bits": [ 9275 ] ,
+          "attributes": {
+            "ROUTING": "X5Y38/X04;X5Y38/X04/Q5;1;X5Y38/B0;X5Y38/B0/X04;1;X5Y38/Q5;;1;X5Y38/SN10;X5Y38/SN10/Q5;1;X5Y39/W250;X5Y39/W250/S111;1;X4Y39/A0;X4Y39/A0/W251;1",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:9.12-9.24"
+          }
+        },
+        "clockCounter_DFFR_Q_D": {
+          "hide_name": 0,
+          "bits": [ 9274 ] ,
+          "attributes": {
+            "ROUTING": "X5Y38/F0;;1;X5Y38/D5;X5Y38/D5/F0;1;X5Y38/XD5;X5Y38/XD5/D5;1"
+          }
+        },
+        "clk_IBUF_I_O": {
+          "hide_name": 0,
+          "bits": [ 9271 ] ,
+          "attributes": {
+            "ROUTING": "X2Y38/CLK1;X2Y38/CLK1/X02;1;X1Y38/CLK1;X1Y38/CLK1/X02;1;X2Y39/CLK2;X2Y39/CLK2/X02;1;X3Y39/CLK0;X3Y39/CLK0/X02;1;X3Y39/CLK1;X3Y39/CLK1/X02;1;X2Y41/CLK2;X2Y41/CLK2/X04;1;X4Y39/CLK0;X4Y39/CLK0/X01;1;X0Y38/S200;X0Y38/S200/S808;1;X0Y40/E200;X0Y40/E200/S202;1;X2Y40/X01;X2Y40/X01/E202;1;X2Y40/CLK2;X2Y40/CLK2/X01;1;X1Y39/X02;X1Y39/X02/E231;1;X1Y39/CLK0;X1Y39/CLK0/X02;1;X2Y42/CLK0;X2Y42/CLK0/X01;1;X2Y38/X02;X2Y38/X02/E232;1;X2Y38/CLK0;X2Y38/CLK0/X02;1;X7Y38/W230;X7Y38/W230/E808;1;X5Y38/X02;X5Y38/X02/W232;1;X5Y38/CLK2;X5Y38/CLK2/X02;1;X4Y38/X02;X4Y38/X02/E232;1;X4Y38/CLK1;X4Y38/CLK1/X02;1;X1Y38/X02;X1Y38/X02/E231;1;X1Y38/CLK2;X1Y38/CLK2/X02;1;X2Y39/S230;X2Y39/S230/E232;1;X2Y41/X04;X2Y41/X04/S232;1;X2Y41/CLK0;X2Y41/CLK0/X04;1;X0Y38/S810;X0Y38/S810/S808;1;X0Y42/E220;X0Y42/E220/S814;1;X2Y42/X01;X2Y42/X01/E222;1;X2Y42/CLK2;X2Y42/CLK2/X01;1;X3Y38/CLK1;X3Y38/CLK1/X02;1;X0Y38/S130;X0Y38/S130/S808;1;X0Y39/E230;X0Y39/E230/S131;1;X2Y39/X02;X2Y39/X02/E232;1;X2Y39/CLK1;X2Y39/CLK1/X02;1;X0Y38/E230;X0Y38/E230/S808;1;X2Y38/E230;X2Y38/E230/E232;1;X3Y38/X02;X3Y38/X02/E231;1;X3Y38/CLK2;X3Y38/CLK2/X02;1;X4Y39/CLK2;X4Y39/CLK2/X01;1;X0Y38/W800;X0Y38/W800/S808;1;X3Y38/S230;X3Y38/S230/E804;1;X3Y39/X02;X3Y39/X02/S231;1;X3Y39/CLK2;X3Y39/CLK2/X02;1;X0Y38/N100;X0Y38/N100/S808;1;X0Y37/W240;X0Y37/W240/N101;1;X1Y37/CLK0;X1Y37/CLK0/E242;1;X0Y38/E800;X0Y38/E800/S808;1;X4Y38/S200;X4Y38/S200/E804;1;X4Y39/X01;X4Y39/X01/S201;1;X4Y39/CLK1;X4Y39/CLK1/X01;1;X0Y6/F6;;1;X0Y6/S830;X0Y6/S830/F6;1;X0Y14/S800;X0Y14/S800/S838;1;X0Y22/S800;X0Y22/S800/S808;1;X0Y30/S800;X0Y30/S800/S808;1;X0Y38/W200;X0Y38/W200/S808;1;X1Y38/S200;X1Y38/S200/E202;1;X1Y40/X03;X1Y40/X03/S202;1;X1Y40/CLK0;X1Y40/CLK0/X03;1"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 9267 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "c:\\Users\\patog\\OneDrive\\Documents\\fpga\\vscode\\lushwaytutorials\\test\\counter.v:3.11-3.14"
+          }
+        }
+      }
+    }
+  }
+}
